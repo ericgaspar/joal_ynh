@@ -51,14 +51,12 @@ ram.runtime = "50M"
         [resources.sources.main]
         url = "https://github.com/anthonyraymond/joal/releases/download/2.1.34/joal.tar.gz"
         sha256 = "969d030a6bfbb27c8a192e95efe1fcf97a17e91d2cb91d139b90dd87a4a45e38"
-
+        in_subdir =false
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
     [resources.install_dir]
-
-    [resources.data_dir]
 
     [resources.permissions]
     main.url = "/"
