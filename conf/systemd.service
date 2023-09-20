@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=/usr/bin/java -jar ./jack-of-all-trades-*.jar --joal-conf="__INSTALL_DIR__" --spring.main.web-environment=true --server.port=__PORT__ --joal.ui.path.prefix="__SECRET__" --joal.ui.secret-token="__TOKEN__"
+ExecStart=/usr/bin/java -jar ./jack-of-all-trades-2.1.34.jar --joal-conf="__INSTALL_DIR__/config.json" --spring.main.web-environment=true --server.port=__PORT__ --joal.ui.path.prefix="__SECRET__" --joal.ui.secret-token="__TOKEN__"
 Restart=on-failure
 RestartSec=10
 
