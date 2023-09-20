@@ -64,4 +64,12 @@ ram.runtime = "50M"
     [resources.ports]
 
     [resources.apt]
-    packages = "openjdk-11-jre-headless"
+    packages = ""
+    packages_from_raw_bash = """
+    debian=$(lsb_release --codename --short)
+    if [[ $debian = "bullseye" ]]; then
+        echo "openjdk-11-jre";
+    elif [[ $debian = "bookworm" ]]; then
+        echo "openjdk-17-jre";
+    fi
+    """
