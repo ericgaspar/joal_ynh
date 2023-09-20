@@ -9,8 +9,8 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
-secret=
-token=
+secret=$(ynh_string_random --length=8)
+token=$(ynh_string_random --length=8)
 
 #=================================================
 # APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
